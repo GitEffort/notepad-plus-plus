@@ -1796,7 +1796,7 @@ bool NppParameters::load()
 				NppXml::Element childNode = NppXml::firstChildElement(root, "NetworkPathsAlwaysAction");
 				if (childNode)
 				{
-					const std::string strValue = NppXml::attribute(childNode, "value");
+					const std::string strValue = NppXml::attribute(childNode, "value", "");
 					if (strValue.length() == 1)
 					{
 						switch (strValue[0])
